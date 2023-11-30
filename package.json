@@ -1,0 +1,20 @@
+{
+  "name": "commute-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "npx nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.generalassemb.ly:neilsedgley/commute-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "type": "module"
+}
