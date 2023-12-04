@@ -3,6 +3,10 @@ import commutesController from '../controllers/commutesController.js';
 
 const Router = express.Router();
 
+Router.route('/traveller/:traveller').get(
+  commutesController.getTravellerCommutes
+);
+
 Router.route('/commutes/:id')
   .get(commutesController.getCommute)
   .put(commutesController.updateCommute)

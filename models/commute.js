@@ -1,10 +1,11 @@
 import mongoose from 'mongoose';
 
 const commuteSchema = new mongoose.Schema({
-  title: { required: true, type: String },
-  description: { required: true, type: String },
-  releaseYear: { required: true, type: Number },
-  genre: { required: true, type: String },
+  traveller: { required: true, type: String },
+  site: { required: true, type: String },
+  direction: { required: true, type: String },
+  travelType: { required: true, type: String },
+  distance: { required: true, type: Number },
 });
 
 const Commute = mongoose.model('Commute', commuteSchema);

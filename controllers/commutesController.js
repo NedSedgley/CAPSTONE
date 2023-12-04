@@ -61,10 +61,20 @@ async function updateCommute(req, res, next) {
   }
 }
 
+async function getTravellerCommutes(req, res, next) {
+  try {
+    const commutes = await Commute.find({ traveller: req.params.traveller });
+    return res.status(200).json(commutes);
+  } catch (err) {
+    next(err);
+  }
+}
+
 export default {
   getAllCommutes,
   createCommute,
   getCommute,
   updateCommute,
   deleteCommute,
+  getTravellerCommutes,
 };
