@@ -5,7 +5,7 @@ const Router = express.Router();
 
 Router.route('/commutes/:id')
   .get(commutesController.getCommute)
-  .post(commutesController.updateCommute)
+  .put(commutesController.updateCommute)
   .delete(commutesController.deleteCommute);
 
 Router.route('/commutes')
