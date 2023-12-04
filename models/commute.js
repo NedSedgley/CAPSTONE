@@ -7,5 +7,5 @@ const commuteSchema = new mongoose.Schema({
   genre: { required: true, type: String },
 });
 
-const Movie = mongoose.model('Movie', movieSchema);
-export default Movie;
+const Commute = mongoose.model('Commute', commuteSchema);
+export default Commute;
