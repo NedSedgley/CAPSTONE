@@ -70,6 +70,15 @@ async function getTravellerCommutes(req, res, next) {
   }
 }
 
+async function getSiteCommutes(req, res, next) {
+  try {
+    const commutes = await Commute.find({ site: req.params.site });
+    return res.status(200).json(commutes);
+  } catch (err) {
+    next(err);
+  }
+}
+
 export default {
   getAllCommutes,
   createCommute,
@@ -77,4 +86,5 @@ export default {
   updateCommute,
   deleteCommute,
   getTravellerCommutes,
+  getSiteCommutes,
 };

@@ -7,6 +7,8 @@ Router.route('/traveller/:traveller').get(
   commutesController.getTravellerCommutes
 );
 
+Router.route('/site/:site').get(commutesController.getSiteCommutes);
+
 Router.route('/commutes/:id')
   .get(commutesController.getCommute)
   .put(commutesController.updateCommute)
